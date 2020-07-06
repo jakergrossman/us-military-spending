@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>US Military Spending</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="content">
+        <h1>
+            <span>Estimated USD spent by the </span>
+            <span>United States Department of Defense:</span>
+        </h1>
+        <div id="counters">
+            <div class="counter-wrapper">
+                <div class="counter-label">
+                    This Year:
+                </div>
+                <div class="counter">
+                    <span class="counter-num" id="year">0</span>
+                </div>
+            </div>
+            <div class="counter-wrapper">
+                <div class="counter-label">
+                    Today:
+                </div>
+                <div class="counter">
+                    <span class="counter-num" id="today">0</span>
+                </div>
+            </div>
+            <div class="counter-wrapper">
+                <div class="counter-label">
+                    Last <span id="seconds">0 Seconds</span>:
+                </div>
+                <div class="counter">
+                    <span class="counter-num" id="minute">0</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="footer">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <span>United States Department of Defense budget </span>
+            <span>estimates sourced from the</span>
+            <span><a href="https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2020/FY20_Green_Book.pdf">National Defense Budget Estimates for </a>FY 2020.</span>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
