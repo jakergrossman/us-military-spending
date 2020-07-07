@@ -64,7 +64,8 @@ function update() {
     document.querySelector('#today').textContent = today;
 
     // update number of seconds
-    let seconds = new Date().getSeconds();
+    // seconds is 0 indexed
+    let seconds = new Date().getSeconds() + 1;
     document.querySelector('#seconds').textContent = seconds + ' ' + (seconds < 2 ? 'Second' : 'Seconds');
 
     document.querySelector('#minute').textContent = minute;
