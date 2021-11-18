@@ -1,6 +1,6 @@
-// Sourced from the Nation Defense Budget Estimates for FY 2020
-// https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2020/FY20_Green_Book.pdf
-const DOD_BUDGET = 693058000000;
+// Sourced from the Nation Defense Budget Estimates for FY 2022
+// https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2022/FY22_Green_Book.pdf
+const DOD_BUDGET = 715000000000;
 
 // 365 Days * 24 Hours * 60 Minutes * 60 Seconds * 1000 Milliseconds
 const MILLIS_PER_DAY = 24 * 60 * 60 * 1000;
@@ -8,9 +8,8 @@ const MILLIS_PER_DAY = 24 * 60 * 60 * 1000;
 // DOD_BUDGET / 365 Days / MILLIS_PER_DAY
 const USD_PER_MILLISECOND = DOD_BUDGET / 365 / MILLIS_PER_DAY;
 
-// US Population sourced from US Census as of July 6, 2020, 1:01pm CST
-// https://census.gov/popclock
-const US_POP = 329908130;
+// sourced from US 2020 census https://data.census.gov/cedsci/table?q=United%20States&tid=DECENNIALPL2020.P1z
+const US_POP = 331449281;
 
 // returns USD spent by the DoD today
 function usdToday() {
