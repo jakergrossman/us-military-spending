@@ -1,6 +1,6 @@
-// Sourced from the Nation Defense Budget Estimates for FY 2022
-// https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2022/FY22_Green_Book.pdf
-const DOD_BUDGET = 715000000000;
+// DoD Budget authority sourced from the Nation Defense Budget Estimates for FY 2020
+// https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2020/FY20_Green_Book.pdf
+const DOD_BUDGET = 718249000000;
 
 // 365 Days * 24 Hours * 60 Minutes * 60 Seconds * 1000 Milliseconds
 const MILLIS_PER_DAY = 24 * 60 * 60 * 1000;
