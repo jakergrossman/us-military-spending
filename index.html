@@ -1,3 +1,7 @@
+<!-- 2022 Jake Grossman -->
+<!-- This is free and unencumbered software released into the public domain. -->
+<!-- See LICENSE.txt for more information. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,12 +43,14 @@
             </div>
         </div>
 
-
-        <div id="footer">
-            <div class="info" aria-hidden="true">i</div>
-            <span>United States Department of Defense </span>
-            <span>budget authority sourced from the</span>
-            <span><a href="https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2020/FY20_Green_Book.pdf">National Defense Budget Estimates for</a> FY 2020.</span>
+        <div id="control">
+          Source:
+          <span id="source"></span>
+          <span id="budget"></span>
+          <div id="budget-selector">
+            <button role="button" onclick="setBudget(budgetPos-1)">&lt;</button>
+            <button role="button" onclick="setBudget(budgetPos+1)">&gt;</button>
+          </div>
         </div>
     </div>
     <script src="app.js"></script>

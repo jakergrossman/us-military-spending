@@ -1,3 +1,7 @@
+/* 2022 Jake Grossman */
+/* This is free and unencumbered software released into the public domain. */
+/* See LICENSE.txt for more information. */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 html, body {
     --primary: #1F1F1F;
@@ -98,44 +102,53 @@ h1 span {
     z-index: -1;
 }
 
-#footer {
-    margin-top: 22px;
-
+#control {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    flex-justify: center;
     align-items: center;
-
-    text-align: center;
-
-    font-size: 3vw;
+    font-size: 1.5rem;
 }
 
-#footer .info {
-    font-size: 1.2vw;
-    width: 1.6vw;
-    height: 1.6vw;
-    border-radius: 50%;
+button {
+    border: none;
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 1.5rem;
+    border-radius: .25rem;
 
-    background-color: var(--primary);
-    color: var(--secondary);
+    color: var(--primary);
+    background-color: var(--secondary);
+    transition: 0.15s;
+
+    padding: 0;
 }
 
-#footer span {
-    display: inline-block;
+@media screen and (max-width: 1099px) {
+    button {
+        font-size: 4rem;
+        width: 6rem;
+        height: 6rem;
+        line-height: 3rem;
+    }
 }
 
-#footer a {
-    color: blue;
-    text-decoration: none;
+@media screen and (min-width: 1100px) {
+    button:hover {
+        cursor: pointer;
+        color: var(--secondary);
+        background-color: var(--primary);
+    }
 }
 
-#footer a:hover {
-    text-decoration: underline;
+#budget {
+    margin-bottom: 0.5rem;
 }
 
-#footer a:visited {
-    color: blue;
+#budget-selector {
+    display: flex;
+    justify-content: space-between;
 }
 
 @media screen and (min-width: 1100px) {
@@ -145,13 +158,5 @@ h1 span {
 
     .counter-wrapper {
         flex-direction: row;
-    }
-
-    #footer {
-        font-size: 1.5vw;
-    }
-
-    #footer i {
-        font-size: 1.625vw;
     }
 }
