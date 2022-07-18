@@ -1,0 +1,13 @@
+; Lines starting with ';' are comments
+
+; Each entry is a comma-separated 4-tuple:
+; (Name, Amount, Link, Access Date as MM/DD/YYYY)
+National Defense Budget Estimates for FY 2022, 715000000000, https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2022/FY22_Green_Book.pdf, 02/20/2022
+National Defense Budget Estimates for FY 2021, 705392000000, https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2021/FY21_Green_Book.pdf, 02/20/2022
+National Defense Budget Actual for FY 2021, 800672200000, https://milex.sipri.org/sipri, 07/17/22
+National Defense Budget Estimates for FY 2020, 718349000000, https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2020/FY20_Green_Book.pdf, 02/20/2022
+National Defense Budget Actual for FY 2020, 778397200000, https://milex.sipri.org/sipri, 07/17/22
+National Defense Budget Estimates for FY 2019, 688636000000, https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY19_Green_Book.pdf, 07/17/22
+National Defense Budget Actual for FY 2019, 734344100000, https://milex.sipri.org/sipri, 07/17/22
+National Defense Budget Estimates for FY 2018, 652570000000, https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2018/FY18_Green_Book.pdf, 07/17/22
+National Defense Budget Actual for FY 2018, 682491400000, https://milex.sipri.org/sipri, 07/17/22

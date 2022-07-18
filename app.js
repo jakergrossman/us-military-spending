@@ -1,35 +1,7 @@
 // 2022 Jake Grossman
 // This is free and unencumbered software released into the public domain.
 // See LICENSE.txt for more information.
-
-const BUDGET_TABLE = [
-    // Nation Defense Budget Estimates for FY 2022
-    // https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2022/FY22_Green_Book.pdf
-    //
-    // Accessed February 20, 2022
-    {
-        "source": "National Defense Budge Estimates for FY 2022",
-        "budget": 715000000000
-    },
-    
-    // Nation Defense Budget Estimates for FY 2021
-    // https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2021/FY21_Green_Book.pdf
-    //
-    // Accessed February 20, 2022
-    {
-        "source": "National Defense Budge Estimates for FY 2021",
-        "budget": 705392000000
-    },
-    
-    // Nation Defense Budget Estimates for FY 2020
-    // https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2020/FY20_Green_Book.pdf
-    //
-    // Accessed February 20, 2022
-    {
-        "source": "National Defense Budge Estimates for FY 2020",
-        "budget": 718349000000
-    },
-];
+var BUDGET_TABLE = []
 
 // 365 Days * 24 Hours * 60 Minutes * 60 Seconds * 1000 Milliseconds
 const millisPerYear = 365 * 24 * 60 * 60 * 1000;
@@ -83,17 +55,34 @@ function update() {
 }
 
 function init() {
-    yearDisplay   = document.querySelector('#year');
-    todayDisplay  = document.querySelector('#today');
-    minuteDisplay = document.querySelector('#minute');
-    secondCounter = document.querySelector('#seconds');
-    sourceElement = document.querySelector('#source');
-    budgetElement = document.querySelector('#budget');
+    fetch("budgets.txt")
+        .then(response => {
+            if (response.status === 200) {
+                response
+                    .text()
+                    .then(txt => {
+                        for (line of txt.split('\n')) {
+                            if (line.length === 0 || line[0] === ';') continue;
 
-    setBudget(0);
 
-    // 60x second
-    setInterval(update, 16.6666666667);
+                            let info = line.split(',').map(x => x.trim());
+                            BUDGET_TABLE.push({source: info[0], budget: parseInt(info[1])});
+                        }
+
+                        yearDisplay   = document.querySelector('#year');
+                        todayDisplay  = document.querySelector('#today');
+                        minuteDisplay = document.querySelector('#minute');
+                        secondCounter = document.querySelector('#seconds');
+                        sourceElement = document.querySelector('#source');
+                        budgetElement = document.querySelector('#budget');
+
+                        setBudget(0);
+
+                        // 60x second
+                        setInterval(update, 16.6666666667);
+                    });
+            }
+        });
 }
 
 window.addEventListener('load', init);
