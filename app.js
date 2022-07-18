@@ -2,6 +2,7 @@
 // This is free and unencumbered software released into the public domain.
 // See LICENSE.txt for more information.
 var BUDGET_TABLE = []
+BUDGET_TABLE.add = (_source, _budget) => BUDGET_TABLE.push({source: _source, budget: _budget})
 
 // 365 Days * 24 Hours * 60 Minutes * 60 Seconds * 1000 Milliseconds
 const millisPerYear = 365 * 24 * 60 * 60 * 1000;
@@ -66,7 +67,7 @@ function init() {
 
 
                             let info = line.split(',').map(x => x.trim());
-                            BUDGET_TABLE.push({source: info[0], budget: parseInt(info[1])});
+                            BUDGET_TABLE.add(info[0], parseInt(info[1]));
                         }
 
                         yearDisplay   = document.querySelector('#year');
